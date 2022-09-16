@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+
+    <listeners>
+        <listener class-name="Listeners.Listener"/>
+    </listeners>
+
+    <parameter name="info" value="Testcases"/>
+
+    <test verbose="2" preserve-order="true" name="/Users/neel_patel/IdeaProjects/page-object-model">
+        <classes>
+            <class name="PracticeDashboardTest"/>
+            <!--<class name="HomeTest"/>-->
+        </classes>
+    </test>
+</suite>

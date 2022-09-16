@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests">
+
+    <listeners>
+        <listener class-name="Listeners.Listener"/>
+    </listeners>
+
+    <parameter name="url" value="google.com"/>
+    <test name="test-practice">
+
+       <!-- <packages>
+            <package name="./src/test/java/TestPractice.java"/>
+        </packages>-->
+
+        <classes>
+            <class name="TestPractice1">
+                <methods>
+                    <!--<exclude name="secondTest"/>-->
+                </methods>
+            </class>
+            <class name="TestPractice2"/>
+            <class name="TestPractice3"/>
+        </classes>
+
+    </test>
+</suite>

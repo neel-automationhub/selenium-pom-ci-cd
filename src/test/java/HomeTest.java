@@ -30,6 +30,7 @@ public class HomeTest extends Base {
 
     @AfterMethod
     public void tearDown() {
+        System.out.println("Closing the browser...");
         driver.quit();
     }
 

@@ -24,7 +24,7 @@ public class PracticeDashboardTest extends Base {
         driver.get("https://rahulshettyacademy.com/#/practice-project");
     }
 
-    @Test(priority = 0)
+    @Test(priority = 1)
     public void goToDashboard() {
         System.out.println("goToDashboard() Method Called Successfully");
         /*homePage.enterName("test");

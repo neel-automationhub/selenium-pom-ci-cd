@@ -4,12 +4,8 @@ import org.testng.annotations.Test;
 
 public class TestPractice2 {
 
-    @BeforeTest
-    public void beforeTest() {
-        System.out.println("TestPractice2:: Before Test ::");
-    }
 
-    @Test(enabled = false)
+    @Test(groups = {"sanity"})
     public void firstTest() {
         System.out.println("TestPractice2:: This is first test");
     }
@@ -24,9 +20,5 @@ public class TestPractice2 {
         System.out.println("TestPractice2:: This is third test");
     }
 
-    @AfterTest
-    public void afterTest() {
-        System.out.println("TestPractice2:: After Test ::");
-    }
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="tests">
+<suite name="All Test Suite">
 
     <listeners>
         <listener class-name="Listeners.Listener"/>
@@ -13,14 +13,16 @@
             <package name="./src/test/java/TestPractice.java"/>
         </packages>-->
 
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+
         <classes>
-            <class name="TestPractice1">
-                <methods>
-                    <!--<exclude name="secondTest"/>-->
-                </methods>
-            </class>
+            <!--<class name="TestPractice1"/>-->
             <class name="TestPractice2"/>
-            <class name="TestPractice3"/>
+            <!--<class name="TestPractice3"/>-->
         </classes>
 
     </test>

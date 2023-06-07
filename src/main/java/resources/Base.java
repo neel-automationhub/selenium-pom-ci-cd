@@ -1,6 +1,5 @@
 package resources;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -35,17 +34,15 @@ public class Base {
 
         if (browser.contains("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
-            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
             if (browser.contains("headless")) {
                 chromeOptions.addArguments("headless");
             }
             driver = new ChromeDriver(chromeOptions);
             driver.manage().window().setSize(new Dimension(1440, 900)); // Once we set this then it will override the maximize mode in headless settings. This will be used when elements not found
         } else if (browser.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("edge")) {
-            WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
 
